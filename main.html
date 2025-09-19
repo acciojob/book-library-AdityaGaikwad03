@@ -1,93 +1,112 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Book Library</title>
-  <style>
-    body {
-      background-color: #f8f8f8;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-    }
+  <link rel="stylesheet" href="style.css">
+	<style>
+		body {
+  background-color: #f8f8f8;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+}
 
-    .book-library {
-      background-color: #ffffff;
-      padding: 20px;
-      max-width: 900px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-      gap: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    }
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+}
 
-    .book {
-      background-color: #fff;
-      padding: 15px;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      text-align: center;
-      transition: transform 0.2s;
-    }
+.book-library {
+  max-width: 800px;
+  margin: auto;
+  background: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 
-    .book:hover {
-      transform: scale(1.05);
-    }
+.book {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px 0;
+  border-bottom: 1px solid #eee;
+  position: relative;
+}
 
-    .book img {
-      width: 100%;
-      height: auto;
-      border-radius: 5px;
-      margin-bottom: 10px;
-    }
+.book:last-child {
+  border-bottom: none;
+}
 
-    .book h3 {
-      font-size: 18px;
-      margin: 10px 0 5px;
-    }
+.book img {
+  width: 110px;
+  height: auto;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
 
-    .book p.author {
-      color: #777777;
-      margin: 5px 0;
-    }
+.book-info {
+  flex: 1;
+  margin-left: 20px;
+}
 
-    .book p.price {
-      color: white;
-      font-weight: bold;
-      margin: 5px 0;
-    }
-	  .price{
-		  background-color: #2ecc71;
-	  }
-  </style>
+.book-info h3 {
+  margin: 0 0 6px;
+  text-transform: uppercase;
+  font-size: 18px;
+}
+
+.book-info .author {
+  margin: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+.price {
+  background: #2ecc71;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 8px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-radius: 0 0 10px 10px;
+}
+
+	</style>
 </head>
 <body>
-  <h1 style="text-align:center; margin-bottom:20px;">📚 My Book Library</h1>
-  
+  <h1>Book Library</h1>
+
   <div class="book-library">
     <div class="book">
       <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Spy-in-the-Amber-by-Manohar-Malgonkar.jpg" alt="Spy in the Amber">
-      <h3>Spy in the Amber</h3>
-      <p class="author">By Manohar Malgonkar</p>
-      <p class="price">₹350</p>
+      <div class="book-info">
+        <h3>SPY IN THE AMBER</h3>
+        <p class="author">By Manohar Malgonkar</p>
+      </div>
+      <div class="price">Rs. 299</div>
     </div>
 
     <div class="book">
       <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Sacred-Games-by-Vikram-Chandra.jpg" alt="Sacred Games">
-      <h3>Sacred Games</h3>
-      <p class="author">By Vikram Chandra</p>
-      <p class="price">₹499</p>
+      <div class="book-info">
+        <h3>SACRED GAMES</h3>
+        <p class="author">By Vikram Chandra</p>
+      </div>
+      <div class="price">Rs. 199</div>
     </div>
 
     <div class="book">
       <img src="https://www.bookgeeks.in/wp-content/uploads/2018/01/Byomkesh-Bakshi-by-Sharadindu-Bandyopadhyay.jpg" alt="Byomkesh Bakshi">
-      <h3>Byomkesh Bakshi</h3>
-      <p class="author">By Sharadindu Bandyopadhyay</p>
-      <p class="price">₹299</p>
+      <div class="book-info">
+        <h3>BYOMKESH BAKSHI</h3>
+        <p class="author">By Sharadindu Bandyopadhyay</p>
+      </div>
+      <div class="price">Rs. 249</div>
     </div>
   </div>
 </body>
