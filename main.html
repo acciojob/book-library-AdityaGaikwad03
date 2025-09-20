@@ -24,7 +24,6 @@
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
       margin: auto;
       gap: 20px;
-      padding: 20px;
     }
 
     .book {
@@ -46,6 +45,7 @@
 
     .book-info {
       padding: 15px 10px 50px;
+      background-color: transparent; /* ✅ Explicitly transparent */
     }
 
     .book-info h2 {
@@ -61,8 +61,8 @@
     }
 
     .price {
-      background-color: rgb(46, 204, 113);
-      color: rgb(255, 255, 255);
+      background-color: rgb(46, 204, 113); /* ✅ Green background */
+      color: rgb(255, 255, 255);           /* ✅ White text */
       font-weight: bold;
       padding: 8px;
       width: 100%;
